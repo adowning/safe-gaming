@@ -29,3 +29,6 @@ jobs:
 
       - name: Run unit tests
         run: pnpm run test:unit
+
+      - name: Deploy to Cloudflare Workers with Wrangler
+        uses: cloudflare/wrangler-action@2.0.0
