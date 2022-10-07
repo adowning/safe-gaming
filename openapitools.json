@@ -1,9 +1,0 @@
-{
-  "$schema": "./node_modules/@openapitools/openapi-generator-cli/config.schema.json",
-  "spaces": 2,
-  "generator-cli": {
-    "version": "6.0.1"
-  }
-}
-https://phoenix-gambling.com/info/TreasureHunt
-wget      --recursive \     --no-clobber \     --page-requisites \     --html-extension \     --convert-links \     --restrict-file-names=windows \     --domains phoenix-gambling.com/info/TreasureHunt \     --no-parent \         www.phoenix-gambling.com/info/TreasureHunt

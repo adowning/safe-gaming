@@ -1,0 +1,16 @@
+{
+  "blogList": [
+    {
+      "readTime": "12",
+      "summary": "This is the first blog post on the new VOXO website!!",
+      "authorPhoto": "https://voxo-website.pages.dev/cms/media/james.png",
+      "author": "Dr. James Harrod",
+      "slug": "new-website",
+      "date": "Oct 07, 2021",
+      "title": "New Website",
+      "content": "## WOW\n\nWhat a privilege to be writing the very first blog post on the new VOXO website.\n\nI can't wait to write more of these! Enjoy the new website!!",
+      "coverPhoto": "/cms/media/blog1.jpg",
+      "category": "Article"
+    }
+  ]
+}

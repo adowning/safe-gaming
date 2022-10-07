@@ -1,4 +1,4 @@
 {
-  "extends": "@antfu",
-  "rules":{"no-console": "off","no-tabs":"off"}
+  "extends": ["@antfu"],
+  "rules": { "@typescript-eslint/indent": "off" }
 }

@@ -1,0 +1,49 @@
+ls main = "dist/index.js"
+name = "notify_app"
+type = "javascript"
+zone_id = ""
+account_id = ""
+workers_dev = true
+compatibility_date = "2022-06-13"
+kv_namespaces = [
+    { binding = "NOTIFY_USERS", id = "55708c4a8d7c4c2ea5dd78c8b0d3d9bf" } # your kv id here
+]
+
+[build]
+#command = "npm install && cd frontend && npm install && cd .. && npm run #build_all"
+command = "npm install && npm run build"
+
+[build.upload]
+format = "service-worker"
+
+# See doc/wrangler.md to learn more about the wrangler section
+[vars]
+VAPID_SERVER_KEY = "{\"crv\":\"P-256\",\"d\":\"f9IYQ_nzSoftowg0EaOlJw56WqaT90Ea1EIM8Y1Bjm8\",\"ext\":true,\"key_ops\":[\"sign\"],\"kty\":\"EC\",\"x\":\"rxsfHox9Hzns81Htp9TaGeZfEdpd9wp7AU2ZkJP4yyY\",\"y\":\"KRxj5fB6o7KHBB1hOGo71WvlggoBFU-WWWHsaAAUK78\"}"
+SUB = "admin@example.com"
+SERVERPWD = "" 
+CORS_ORIGIN = "*" 
+SERVE_FRONTEND = true
+
+# [secrets]
+VAPID_SERVER_KEYz = "{\"crv\":\"P-256\",\"d\":\"f9IYQ_nzSoftowg0EaOlJw56WqaT90Ea1EIM8Y1Bjm8\",\"ext\":true,\"key_ops\":[\"sign\"],\"kty\":\"EC\",\"x\":\"rxsfHox9Hzns81Htp9TaGeZfEdpd9wp7AU2ZkJP4yyY\",\"y\":\"KRxj5fB6o7KHBB1hOGo71WvlggoBFU-WWWHsaAAUK78\"}"
+SERVERPWDz = ""
+
+
+[site]
+bucket = "frontend/build"
+# entry-point = "."
+
+[miniflare]
+kv_persist = "./data/"
+
+[env.demo]
+kv_namespaces = [
+    { binding = "NOTIFY_USERS", id = "5df92089b8ea45e68592058740136ce1" }
+]
+
+[env.demo.vars]
+VAPID_SERVER_KEY = "{\"crv\":\"P-256\",\"d\":\"MM3IEY73Br5_Hdtfknab6QIXqCHXv7S5cZrlD3lrjuk\",\"ext\":true,\"key_ops\":[\"sign\"],\"kty\":\"EC\",\"x\":\"YNEmMB5QyQULW4WepHQvn5WWrBXpHGFB51eJ3oJj3k4\",\"y\":\"NU3NCQI82-WvNWc2vc9HV8YOIAC9VsMrMhJhi3XS8MQ\"}"
+SUB = "thisk0in@gmail.com"
+SERVERPWD = ""
+CORS_ORIGIN = "*"
+SERVE_FRONTEND = true

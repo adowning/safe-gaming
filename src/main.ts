@@ -1,24 +1,31 @@
 // register vue composition api globally
-import 'primeflex/primeflex.css'
-import 'primeicons/primeicons.css'
-import { ViteSSG } from 'vite-ssg'
-import generatedRoutes from 'virtual:generated-pages'
-import { setupLayouts } from 'virtual:generated-layouts'
+import { createApp } from 'vue'
+import { createRouter, createWebHistory } from 'vue-router'
+import routes from 'virtual:generated-pages'
+import { registerSW } from 'virtual:pwa-register'
 import App from './App.vue'
-import 'uno.css'
-import '@sfxcode/formkit-primevue/dist/sass/formkit-primevue.scss'
-import '@sfxcode/formkit-primevue/dist/sass/formkit-prime-inputs.scss'
-import 'primevue/resources/themes/saga-blue/theme.css'
-import 'primevue/resources/primevue.css'
-import './styles/tailwind.css'
-const routes = setupLayouts(generatedRoutes)
-export const createApp = ViteSSG(
-  App,
-  { routes },
-  (ctx) => {
-    // install all modules under `modules/`
-    Object.values(import.meta.globEager('./modules/*.ts')).map(i => i.install?.(ctx))
+
+// windicss layers
+import 'virtual:windi-base.css'
+import 'virtual:windi-components.css'
+import './styles/main.css'
+import 'virtual:windi-utilities.css'
+import { initSW } from './sw-helpers'
+
+// if ('serviceWorker' in navigator) {
+//   console.log('sw')
+//   // && !/localhost/.test(window.location)) {
+//   registerSW()
+// }
+if (import.meta.env.MODE !== 'development') initSW()
+const app = createApp(App)
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) return { el: to.hash }
   },
+})
 
-)
-
+app.use(router)
+app.mount('#app')

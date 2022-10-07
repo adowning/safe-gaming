@@ -1,0 +1,8 @@
+node_modules
+dist
+.mf
+build
+size-plugin.json
+coverage
+images/
+*.deb

@@ -1,122 +1,61 @@
-# Vite Typescript + PrimeVue Starter
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6b755fdd-d5b2-4dd8-a70f-3488032cb854/deploy-status)](https://app.netlify.com/sites/determined-shannon-bcd95d/deploys)
 
-Build your VUE.js App with the latest and fastest VITE Plugins (nuxt.js like).
-First Class PrimeVUE support.
-
-![vite-prime-vue-starter](vite-prime-vue-starter.png)
-
-[![CI](https://github.com/sfxcode/vite-primevue-starter/actions/workflows/main.yml/badge.svg)](https://github.com/sfxcode/vite-primevue-starter/actions/workflows/main.yml)
-
-THX to [antfu / Vitesse](https://github.com/antfu/vitesse) for starter code
+![alt text](https://github.com/voxoco/website/blob/main/assets/images/logo-footer.svg?raw=true)
 
 ## Features
- 
-- Vue 3.2 
-- Vite 3
-- Vitest (Testing Framework)
-- Testing with cypress (e2e)
-- Composition API
-- Script Setup
-- Routing VitePages / ViteLayout
-- Pina as Store / CachedPiniaStore for effective data caching
-- Validation with Vuelidate 2
-- PrimeVue with Theme: Sakai (Free Admin Template)
-- Validation, PrimeVue Form elements by [formkit-primevue](https://github.com/sfxcode/formkit-primevue)
-- Markdown Support (VitePages)
-- TypeScript 4.5
-- UnoCSS
-- SSG Support
-- Eslint
 
-### Modules
-- i18n
-- nprogress
-- pinia
-- primevue
+- ⚡️ [Vue 3](https://github.com/vuejs/vue-next), [Vite 2](https://github.com/vitejs/vite), [pnpm](https://pnpm.js.org/), [ESBuild](https://github.com/evanw/esbuild) - born with fastness
 
-## Variations
+- 🗂 [File based routing](./src/pages)
 
-### nuxt3-primevue-starter
+- 📦 [Components auto importing](./src/components)
 
-Nuxt3 Primevue Starter Template
+- 🎨 [Windi CSS](https://github.com/windicss/windicss) - next generation utility-first CSS framework
 
-[Github Repository](https://github.com/sfxcode/nuxt3-primevue-starter)
+- 😃 [Use icons from any icon sets, with no compromise](./src/components)
 
-[App on Netlify](https://nuxt3-primevue-starter.netlify.app/)
+- 🔥 Use the [new `<script setup>` style](https://github.com/vuejs/rfcs/pull/227)
 
-- [Nuxt 3](https://v3.nuxtjs.org) - SSR, ESR, File-based routing, components auto importing, modules, etc.
-- Vite - Instant HMR
-- [UnoCSS](https://github.com/antfu/unocss) - The instant on-demand atomic CSS engine.
-- Use icons from any icon sets in Pure CSS, powered by [UnoCSS](https://github.com/antfu/unocss)
-- [State Management via Pinia](https://pinia.esm.dev)
-- PrimeVue 3.12.x
-- Logging
+- 🦾 TypeScript, of course
 
-### vite-primevue-starter-lite
+- ☁️ Deploy on Netlify, zero-config
 
-[Github Repository](https://github.com/sfxcode/vite-primevue-starter-lite)
+<br>
 
-[App on Netlify](https://vite-primevue-starter-lite.netlify.app/)
+See [Vitesse](https://github.com/antfu/vitesse) for full featureset.
 
-## Project setup and usage
+## Pre-packed
 
-Install node:
+### UI Frameworks
 
-**Latest node LTS version required (16)**
-Use node manager like **nvm** to install.
+- [Windi CSS](https://github.com/windicss/windicss) (On-demand [TailwindCSS](https://tailwindcss.com/)) - lighter and faster, with a bunch of additional features!
 
-Install pnpm:
-[https://pnpm.io/installation](https://pnpm.io/installation)
+### Icons
 
-Install dependencies:
+- [Iconify](https://iconify.design) - use icons from any icon sets [🔍Icônes](https://icones.netlify.app/)
+- [`unplugin-icons`](https://github.com/antfu/unplugin-icons) - using icons as components on-demand
 
+### Plugins
+
+- [Vue Router](https://github.com/vuejs/vue-router)
+  - [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages) - file system based routing
+- [`unplugin-auto-import`](https://github.com/antfu/unplugin-auto-import) - Directly use Vue Composition API and others without importing
+- [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components) - components auto import
+- [`vite-plugin-windicss`](https://github.com/antfu/vite-plugin-windicss) - Windi CSS integration
+- [VueUse](https://github.com/antfu/vueuse) - collection of useful composition APIs
+
+## Try it now!
+
+### GitHub Template
+
+[Create a repo from this template on GitHub](https://github.com/antfu/vitesse-lite/generate).
+
+### Clone to local
+
+If you prefer to do it manually with the cleaner git history
+
+```bash
+npx degit antfu/vitesse-lite my-vitesse-app
+cd my-vitesse-app
+pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
 ```
-pnpm install
-```
-
-Run development server:
-
-```
-pnpm dev
-```
-
-Open Cypress test runner:
-
-```
-pnpm test:e2e
-```
-
-Component test runner:
-
-```
-pnpm test:unit
-```
-
-Run Cypress tests in headless mode:
-
-```
-pnpm test:ci
-```
-
-Build and preview built site locally:
-
-```
-pnpm preview
-```
-
-Build:
-
-```
-pnpm build
-```
-
-## Tools
-
-I use IntelliJ with VUE.js and Prettier plugin.
-
-## Supporters
-
-JetBrains is supporting this open source project with:
-
-[![Intellij IDEA](http://www.jetbrains.com/img/logos/logo_intellij_idea.png)](http://www.jetbrains.com/idea/)
-

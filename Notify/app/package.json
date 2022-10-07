@@ -1,0 +1,50 @@
+{
+    "name": "notify_worker",
+    "version": "1.0.0",
+    "description": "Notify worker",
+    "main": "dist/index.js",
+    "type": "module",
+    "scripts": {
+        "build_all": "npm i && npm run build && cd frontend && npm i && npm run build",
+        "build": "esbuild --bundle --sourcemap --minify --target=esnext --outdir=dist ./src/index.js",
+        "serve": "miniflare dist/index.js --kv-persist --wrangler-config wrangler.toml",
+        "dev": "miniflare dist/index.js --kv-persist --wrangler-config wrangler.toml --watch --env .env",
+        "publish": "wrangler publish",
+        "lint": "eslint src/",
+        "unittest": "jest --runInBand",
+        "test": "npm run lint && npm run build_all && npm run cover",
+        "cover": "jest --collectCoverage --runInBand",
+        "setup": "npm i && cd frontend && npm i"
+    },
+    "eslintConfig": {
+        "root": true,
+        "extends": [
+            "typescript",
+            "prettier"
+        ]
+    },
+    "devDependencies": {
+        "@cloudflare/workers-types": "^2.2.2",
+        "@types/jest": "^27.4.0",
+        "@types/web-push": "^3.3.2",
+        "@typescript-eslint/eslint-plugin": "^4.32.0",
+        "@typescript-eslint/parser": "^4.32.0",
+        "ava": "^3.15.0",
+        "esbuild": "^0.14.21",
+        "eslint": "^7.32.0",
+        "jest": "^27.4.7",
+        "jest-environment-miniflare": "^2.1.0",
+        "jest-fetch-mock": "^3.0.3",
+        "miniflare": "^2.1.0",
+        "puppeteer": "^14.4.1",
+        "ts-jest": "^27.0.5",
+        "ts-loader": "^9.2.2",
+        "typescript": "^4.4.3"
+    },
+    "dependencies": {
+        "@cloudflare/kv-asset-handler": "^0.1.3",
+        "global": "^4.4.0",
+        "itty-router": "^2.4.2",
+        "wrangler": "^2.0.18"
+    }
+}
