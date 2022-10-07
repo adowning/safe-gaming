@@ -32,7 +32,7 @@ SERVERPWDz = ""
 [site]
 # bucket = "frontend/build"
 bucket = "dist"
-# entry-point = "."
+entry-point = "."
 
 [miniflare]
 kv_persist = "./data/"
@@ -48,3 +48,12 @@ SUB = "thisk0in@gmail.com"
 SERVERPWD = ""
 CORS_ORIGIN = "*"
 SERVE_FRONTEND = true
+
+[env.production]
+route = { pattern = "staging.example.org/*", zone_name = "example.org" }
+
+
+# [site]
+# bucket = "./public"
+# include = ["upload_dir"]
+# exclude = ["ignore_dir"]

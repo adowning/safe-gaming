@@ -9,7 +9,7 @@ on:
     branches:
       - master
 jobs:
-  test-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -27,8 +27,8 @@ jobs:
 
       - run: pnpm install
 
-      - name: Run unit tests
-        run: pnpm run test:unit
+      # - name: Run unit tests
+      #   run: pnpm run test:unitp
 
       - name: Publish
         uses: cloudflare/wrangler-action@2.0.0
@@ -46,3 +46,5 @@ jobs:
   #       uses: cloudflare/wrangler-action@2.0.0
   #       with:
   #         apiToken: ${{ secrets.CF_API_TOKEN }}
+
+  
