@@ -22,7 +22,7 @@
     "@supabase/supabase-js": "^1.35.6",
     "@vue-leaflet/vue-leaflet": "^0.6.1",
     "@vuelidate/core": "2.0.0-alpha.44",
-    "@vuelidate/validators": "2.0.0-alpha.31",
+    "@vuelidate/validators": "2.0.0",
     "@vueuse/core": "^9.0.2",
     "@vueuse/head": "~0.7.9",
     "add": "^2.0.6",
