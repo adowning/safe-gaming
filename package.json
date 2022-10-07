@@ -93,7 +93,7 @@
     "vite-plugin-restart": "^0.2.0",
     "vite-plugin-vue-layouts": "^0.7.0",
     "vite-ssg": "^0.20.0",
-    "vitest": "^0.20.3",
+    "vitest": "^0.24.0",
     "vue-tsc": "^0.39.4",
     "wait-on": "~6.0.1"
   }
