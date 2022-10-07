@@ -18,7 +18,7 @@
   "dependencies": {
     "@formkit/vue": "^1.0.0-beta.10",
     "@headlessui/vue": "^1.6.7",
-    "@sfxcode/formkit-primevue": "^0.6.0",
+    "@sfxcode/formkit-primevue": "^0.8.0",
     "@supabase/supabase-js": "^1.35.6",
     "@vue-leaflet/vue-leaflet": "^0.6.1",
     "@vuelidate/core": "2.0.0-alpha.44",
