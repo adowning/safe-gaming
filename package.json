@@ -27,7 +27,7 @@
     "@antfu/eslint-config": "^0.7.0",
     "@headlessui/vue": "^1.4.1",
     "@heroicons/vue": "^1.0.4",
-    "@iconify/json": "^1.1.395",
+    "@iconify/json": "^2.1.131",
     "@types/node": "^16.7.6",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@vitejs/plugin-vue": "^1.6.0",
